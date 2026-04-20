@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"/>
+<meta name="theme-color" content="#6B46C1"/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet"/>
+<title>MédiCI Admin ⚡</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Nunito',sans-serif;background:#F7FAFA;}
+.splash{position:fixed;inset:0;background:linear-gradient(135deg,#6B46C1,#44337A);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999;transition:opacity .5s;}
+.splash h1{font-family:'Outfit',sans-serif;font-weight:900;font-size:32px;color:#fff;letter-spacing:-1px;margin-bottom:6px;}
+.splash p{color:rgba(255,255,255,.7);font-size:12px;font-weight:600;}
+.dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5);margin:20px auto 0;animation:dp 1.2s ease infinite;}
+@keyframes dp{0%,100%{transform:scale(1);opacity:.5}50%{transform:scale(1.5);opacity:1}}
+</style>
+</head>
+<body>
+<div class="splash" id="sp">
+<h1>Médi<span style="opacity:.65">CI</span> ⚡</h1>
+<p>ADMINISTRATION</p>
+<div class="dot"></div>
+</div>
+<noscript>Activez JavaScript.</noscript>
+<div id="root"></div>
+<script>
+window.addEventListener('load',function(){
+setTimeout(function(){
+var s=document.getElementById('sp');
+if(s){s.style.opacity='0';setTimeout(function(){s.remove();},500);}
+},600);
+});
+</script>
+</body>
+</html>
